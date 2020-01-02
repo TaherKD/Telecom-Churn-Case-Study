@@ -1,0 +1,220 @@
+---------------------------------------------
+LogisiticRegression
+---------------------------------------------
+accuracy: 0.8700027854821164
+precision: 0.37618520462313354
+recall: 0.7665205546169885
+f1: 0.504448504763032
+auc: 0.8231500034192756
+---------------------------------------------
+---------------------------------------------
+KNeighborsClassifier
+---------------------------------------------
+accuracy: 0.8416245088438975
+precision: 0.3250693783254451
+recall: 0.7348150008371002
+f1: 0.4492677344129013
+auc: 0.7932666662299719
+---------------------------------------------
+---------------------------------------------
+SupportVectorClassifier
+---------------------------------------------
+accuracy: 0.8683023298290569
+precision: 0.4090358556474861
+recall: 0.6059576173589233
+f1: 0.444233603594642
+auc: 0.7495267906981209
+---------------------------------------------
+---------------------------------------------
+DecisionTreeClassifier
+---------------------------------------------
+accuracy: 0.8617818869854567
+precision: 0.3754410367479951
+recall: 0.5804327808471454
+f1: 0.4220488260922883
+auc: 0.7344021190208554
+---------------------------------------------
+---------------------------------------------
+RandomForestClassifier
+---------------------------------------------
+accuracy: 0.8740144964795165
+precision: 0.4124287313246071
+recall: 0.566446585391839
+f1: 0.44441917818314897
+auc: 0.7347644257271456
+---------------------------------------------
+---------------------------------------------
+GaussianNB
+---------------------------------------------
+accuracy: 0.8701530946199241
+precision: 0.3972113315203044
+recall: 0.5810422152210198
+f1: 0.44212154260500386
+auc: 0.7392596966932543
+---------------------------------------------
+---------------------------------------------
+XGBClassifier
+---------------------------------------------
+accuracy: 0.8716088189584084
+precision: 0.39703097963634837
+recall: 0.6026563257602936
+f1: 0.45237757402540324
+auc: 0.7498420060920087
+---------------------------------------------
+---------------------------------------------
+SGDClassifier
+---------------------------------------------
+accuracy: 0.8624727233294696
+precision: 0.36169098430818075
+recall: 0.7635260185988464
+f1: 0.4902593512383822
+auc: 0.8176752173004351
+---------------------------------------------
+---------------------------------------------
+RidgeClassifier
+---------------------------------------------
+accuracy: 0.8676669515155244
+precision: 0.37213511863074394
+recall: 0.7612184121475937
+f1: 0.4992532069044279
+auc: 0.8194726677199432
+---------------------------------------------
+---------------------------------------------
+PassiveAggressiveClassifier
+---------------------------------------------
+accuracy: 0.834474255030063
+precision: 0.3340570429731947
+recall: 0.7596593762841879
+f1: 0.45900598282291083
+auc: 0.8006028754818842
+---------------------------------------------
+---------------------------------------------
+Perceptron
+---------------------------------------------
+accuracy: 0.8185458436153134
+precision: 0.31456615557720957
+recall: 0.7628065689542335
+f1: 0.43935468486414747
+auc: 0.7933102882361139
+---------------------------------------------
+---------------------------------------------
+NearestCentroid
+---------------------------------------------
+accuracy: 0.8832497761470621
+precision: 0.39486107056584596
+recall: 0.6611509367913186
+f1: 0.49432576607568335
+auc: 0.7826955032991747
+---------------------------------------------
+---------------------------------------------
+AdaBoostClassifier
+---------------------------------------------
+accuracy: 0.8466527952868773
+precision: 0.3255619252970673
+recall: 0.7240628281813615
+f1: 0.4491557800902621
+auc: 0.791150617213226
+---------------------------------------------
+---------------------------------------------
+GradientBoostingClassifier
+---------------------------------------------
+accuracy: 0.8641891939654804
+precision: 0.3630012169060369
+recall: 0.7326088610870128
+f1: 0.4844820437514367
+auc: 0.8046162926378942
+---------------------------------------------
+---------------------------------------------
+BaggingClassifier
+---------------------------------------------
+accuracy: 0.881312546288245
+precision: 0.41266741632789733
+recall: 0.6626181452901695
+f1: 0.49511500635559125
+auc: 0.7822993612792024
+---------------------------------------------
+---------------------------------------------
+ExtraTreesClassifier
+---------------------------------------------
+accuracy: 0.8929119705267187
+precision: 0.46015711388323177
+recall: 0.6171377258268268
+f1: 0.5048240203057914
+auc: 0.7680563212478518
+---------------------------------------------
+
+
+Pipeline(memory=None,
+         steps=[('smote',
+                 SMOTE(k_neighbors=5, kind='deprecated',
+                       m_neighbors='deprecated', n_jobs=-1,
+                       out_step='deprecated', random_state=None, ratio=None,
+                       sampling_strategy='auto', svm_estimator='deprecated')),
+                ('logisticregression',
+                 LogisticRegression(C=0.001, class_weight='balanced',
+                                    dual=False, fit_intercept=True,
+                                    intercept_scaling=1, l1_ratio=None,
+                                    max_iter=100, multi_class='warn', n_jobs=-1,
+                                    penalty='l2', random_state=100,
+                                    solver='liblinear', tol=0.0001, verbose=0,
+                                    warm_start=False))],
+         verbose=False)
+         
+         
+Pipeline(memory=None,
+         steps=[('smote',
+                 SMOTE(k_neighbors=5, kind='deprecated',
+                       m_neighbors='deprecated', n_jobs=-1,
+                       out_step='deprecated', random_state=None, ratio=None,
+                       sampling_strategy='auto', svm_estimator='deprecated')),
+                ('ridgeclassifier',
+                 RidgeClassifier(alpha=1000, class_weight='balanced',
+                                 copy_X=True, fit_intercept=True, max_iter=None,
+                                 normalize=False, random_state=100,
+                                 solver='saga', tol=0.001))],
+         verbose=False)
+         
+Pipeline(memory=None,
+         steps=[('smote',
+                 SMOTE(k_neighbors=5, kind='deprecated',
+                       m_neighbors='deprecated', n_jobs=-1,
+                       out_step='deprecated', random_state=None, ratio=None,
+                       sampling_strategy='auto', svm_estimator='deprecated')),
+                ('gradientboostingclassifier',
+                 GradientBoostingClassifier(criterion='friedman_mse', init=None,
+                                            learning_rate=0.1, loss='deviance',
+                                            max_depth=3, max_features=None,
+                                            max_leaf_nodes=None,
+                                            min_impurity_decrease=0.0,
+                                            min_impurity_split=None,
+                                            min_samples_leaf=1,
+                                            min_samples_split=2,
+                                            min_weight_fraction_leaf=0.0,
+                                            n_estimators=50,
+                                            n_iter_no_change=None,
+                                            presort='auto', random_state=100,
+                                            subsample=1.0, tol=0.0001,
+                                            validation_fraction=0.1, verbose=0,
+                                            warm_start=False))],
+         verbose=False)
+
+     
+Pipeline(memory=None,
+         steps=[('smote',
+                 SMOTE(k_neighbors=5, kind='deprecated',
+                       m_neighbors='deprecated', n_jobs=-1,
+                       out_step='deprecated', random_state=None, ratio=None,
+                       sampling_strategy='auto', svm_estimator='deprecated')),
+                ('randomforestclassifier',
+                 RandomForestClassifier(bootstrap=True, class_weight=None,
+                                        criterion='gini', max_depth=5,
+                                        max_features='auto',
+                                        max_leaf_nodes=None,
+                                        min_impurity_decrease=0.0,
+                                        min_impurity_split=None,
+                                        min_samples_leaf=1, min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=1000, n_jobs=-1,
+                                        oob_score=False, random_state=100,
+                                        verbose=0, warm_start=False))],
+         verbose=False)
